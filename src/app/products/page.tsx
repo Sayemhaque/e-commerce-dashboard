@@ -2,6 +2,7 @@ import React from "react";
 import { Product, product } from "../../../db/schema";
 import db from "../../../db";
 import Image from "next/image";
+import TableImage from "./components/table-image";
 
 export default async function ProductTable() {
   const products: Product[] = await db.select().from(product);
@@ -21,15 +22,7 @@ export default async function ProductTable() {
               <td className='py-2 px-4 border-b'>{product.name}</td>
               <td className='py-2 px-4 border-b'>${product.price}</td>
               <td className='py-2 px-4 border-b'>
-                {product.photo && (
-                  <Image
-                    src={product.photo}
-                    alt={product.name}
-                    className='h-20 rounded-lg'
-                    height={20}
-                    width={80}
-                  />
-                )}
+                {product.photo && <TableImage photo={product.photo} />}
               </td>
             </tr>
           ))}
