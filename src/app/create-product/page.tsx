@@ -28,14 +28,12 @@ export default function ProductForm() {
   };
 
   return (
-    <div className='max-w-md mx-auto my-8'>
-      <form
-        action={handleSubmit}
-        className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'>
+    <div className='max-w-xl mx-auto my-8'>
+      <form action={handleSubmit} className=' pt-6 pb-8 mb-4'>
         <div className='mb-4'>
           <label
             htmlFor='productName'
-            className='block text-gray-700 text-sm font-bold mb-2'>
+            className='block text-gray-300 text-sm font-bold mb-2'>
             Product Name
           </label>
           <input
@@ -49,12 +47,12 @@ export default function ProductForm() {
         <div className='mb-4'>
           <label
             htmlFor='description'
-            className='block text-gray-700 text-sm font-bold mb-2'>
+            className='block text-gray-300 text-sm font-bold mb-2'>
             Description
           </label>
           <textarea
             name='description'
-            className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+            className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline'
             placeholder='Enter product description'
             rows={8}
             required
@@ -63,13 +61,13 @@ export default function ProductForm() {
         <div className='mb-4'>
           <label
             htmlFor='photo'
-            className='block text-gray-700 text-sm font-bold mb-2'>
-            Description
+            className='block text-gray-300 text-sm font-bold mb-2'>
+            Photo
           </label>
           <input
             type='file'
             name='photo'
-            className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+            className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline'
             placeholder='Enter product description'
             required
           />
@@ -77,13 +75,13 @@ export default function ProductForm() {
         <div className='mb-4'>
           <label
             htmlFor='price'
-            className='block text-gray-700 text-sm font-bold mb-2'>
+            className='block text-gray-300 text-sm font-bold mb-2'>
             Price
           </label>
           <input
             type='number'
             name='price'
-            className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+            className='shadow appearance-none border rounded w-full py-2 px-3 ext-gray-300 leading-tight focus:outline-none focus:shadow-outline'
             placeholder='Enter product price'
             required
           />
@@ -91,8 +89,8 @@ export default function ProductForm() {
         <div className='flex items-center justify-between'>
           <button
             type='submit'
-            className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
-            Create Product
+            className='bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
+            Add Product
           </button>
         </div>
       </form>
