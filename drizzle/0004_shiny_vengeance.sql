@@ -1,0 +1,1 @@
+ALTER TABLE "product" ADD COLUMN "name" text NOT NULL;
